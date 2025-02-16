@@ -1,0 +1,125 @@
+.relative {
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Background color with opacity */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start; /* Align to the left */
+    text-align: left;
+    padding: 1rem;
+    z-index: 10; /* Ensure the overlay is on top of the image */
+  }
+  
+  h1 {
+    margin-left: 100px; 
+    margin-top:100px/* Move text slightly to the right */
+  }
+  
+  .description {
+    max-width: 30%; /* Decrease width to allow the text to wrap and form multiple lines */
+    line-height: 1.5; /* Improve line spacing for readability */
+    margin-left: 100px; /* Move description text to the right */
+  }
+  
+  button {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 20px 30px;
+    color: #333333;
+    font-weight: 500;
+    font-size: 15px;
+    border: 0;
+    background-color:  #eab308;
+    white-space: nowrap;
+    /* background-color: #fbbf24;
+    color: #000;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    cursor: pointer; */
+    margin-top:100px;
+    margin-right:70px;
+    font-family: 'Roboto', sans-serif
+  }
+  
+  button:hover {
+    background-color:  #1d5199;;
+  }
+  
+  .fas {
+    font-size: 2rem;
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .text-4xl {
+    font-size: 2.25rem;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Styling for positioning the buttons and arrows on top of the image */
+  .z-20 {
+    z-index: 20; /* Higher z-index to place buttons and arrows above the image and overlay */
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .top-4 {
+    top: 1rem;
+  }
+  
+  .right-4 {
+    right: 1rem;
+  }
+  
+  .inset-y-0 {
+    top: 0;
+    bottom: 0;
+  }
+  
+  .left-0 {
+    left: 0;
+  }
+  
+  .right-0 {
+    right: 0;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
