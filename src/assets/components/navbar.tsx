@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css"; // Importing the CSS file
+import logo from "../images/logo.webp";
 
 const Navbar: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<string>("home");
@@ -16,7 +17,7 @@ const Navbar: React.FC = () => {
           <img
             alt="FUSIONCUTTECH"
             className="logo"
-            src=""
+            src={logo}
           />
         </div>
         <nav className="nav-menu">

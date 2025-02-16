@@ -17,14 +17,14 @@ const HomePage: React.FC = () => {
         "Boasting 40 years of industry experience, we provide our clients with quality and personalized service no one can match.",
     },
     {
-      title: "Expert Solutions",
+      title: "Laser Cutting",
       description:
-        "Providing innovative solutions for industries across the board. From design to production, we lead the way in quality craftsmanship.",
+        "We use the latest technology in laser cutting to achieve precise edges and high-quality finishes.",
     },
     {
-      title: "Precision Engineering",
+      title: "Metal Fabrication",
       description:
-        "State-of-the-art technology and expert craftsmanship come together to deliver precision-engineered solutions that meet the highest standards.",
+        "At Metal Tronics Inc., we combine our industry skills, 40 years of experience and state-of-the-art equipment to manufacture quality products at competitive prices.",
     },
   ];
 
@@ -35,61 +35,58 @@ const HomePage: React.FC = () => {
     // Change image every 5 seconds
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change every 5000ms (5 seconds)
+    }, 15000); // Change every 5000ms (5 seconds)
 
     return () => clearInterval(intervalId); // Clear interval on component unmount
   }, []);
 
-  //   // Function to go to the next image
-  //   const nextImage = () => {
-  //     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  //   };
+  // Function to go to the next image
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
-  //   // Function to go to the previous image
-  //   const prevImage = () => {
-  //     setCurrentImageIndex(
-  //       (prevIndex) => (prevIndex - 1 + images.length) % images.length
-  //     );
-  //   };
+  // Function to go to the previous image
+  const prevImage = () => {
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
 
   return (
     <div>
+      {/* Request a Quote Button */}
       <div className="absolute top-4 right-4 z-20">
-        <button className="bg-yellow-500 text-black font-bold py-2 px-4">
+        <button className=" quote-btn bg-yellow-500 text-black font-bold py-2 px-4">
           REQUEST A QUOTE
         </button>
       </div>
+
+      {/* Banner Section */}
       <div className="relative w-full h-96">
         <img
           alt="Background image"
           className="w-full h-full object-cover"
           height="600"
           src={images[currentImageIndex]} // Dynamic background image
-          width="1920"
+          width="1536"
         />
         {/* Content Overlay */}
         <div className="overlay">
           <h1 className="text-white text-4xl font-bold mb-4 text-right">
-            {content[currentImageIndex].title}
+            <i>{content[currentImageIndex].title}</i>
           </h1>
           <p className="text-white text-lg mb-6 description">
             {content[currentImageIndex].description}
           </p>
         </div>
 
-        {/* Request a Quote Button */}
-
-        {/* Navigation Arrows
-        <div className="absolute inset-y-0 left-0 flex items-center z-20">
-          <button onClick={prevImage} className="text-white text-2xl px-4">
-            <i className="fas fa-chevron-left"></i>
-          </button>
-        </div>
-        <div className="absolute inset-y-0 right-0 flex items-center z-20">
-          <button onClick={nextImage} className="text-white text-2xl px-4">
-            <i className="fas fa-chevron-right"></i>
-          </button>
-        </div> */}
+        {/* Navigation Arrows */}
+        <button className="nav-arrow left-arrow" onClick={prevImage}>
+          ❮
+        </button>
+        <button className="nav-arrow right-arrow" onClick={nextImage}>
+          ❯
+        </button>
       </div>
     </div>
   );
