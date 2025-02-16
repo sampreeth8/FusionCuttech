@@ -40,17 +40,17 @@ const HomePage: React.FC = () => {
     return () => clearInterval(intervalId); // Clear interval on component unmount
   }, []);
 
-  // Function to go to the next image
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  //   // Function to go to the next image
+  //   const nextImage = () => {
+  //     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //   };
 
-  // Function to go to the previous image
-  const prevImage = () => {
-    setCurrentImageIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
-  };
+  //   // Function to go to the previous image
+  //   const prevImage = () => {
+  //     setCurrentImageIndex(
+  //       (prevIndex) => (prevIndex - 1 + images.length) % images.length
+  //     );
+  //   };
 
   return (
     <div>
