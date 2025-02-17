@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css"; // Importing the CSS file
-import logo from "../images/logo.webp";
+import logo from "../images/companylogo.jpg";
 
 const Navbar: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<string>("home");
@@ -14,17 +14,15 @@ const Navbar: React.FC = () => {
     <header className="header">
       <div className="header-layout">
         <div className="logo-container">
-          <img
-            alt="FUSIONCUTTECH"
-            className="logo"
-            src={logo}
-          />
+          <img alt="FUSIONCUTTECH" className="logo" src={logo} />
         </div>
         <nav className="nav-menu">
           <ul className="menu-list">
             <li>
               <a
-                className={`menu-item ${selectedItem === "home" ? "selected" : ""}`}
+                className={`menu-item ${
+                  selectedItem === "home" ? "selected" : ""
+                }`}
                 href="#"
                 onClick={() => handleMenuClick("home")}
               >
@@ -33,7 +31,9 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <a
-                className={`menu-item ${selectedItem === "companyProfile" ? "selected" : ""}`}
+                className={`menu-item ${
+                  selectedItem === "companyProfile" ? "selected" : ""
+                }`}
                 href="#"
                 onClick={() => handleMenuClick("companyProfile")}
               >
@@ -42,7 +42,9 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <a
-                className={`menu-item ${selectedItem === "metalFabrication" ? "selected" : ""}`}
+                className={`menu-item ${
+                  selectedItem === "metalFabrication" ? "selected" : ""
+                }`}
                 href="#"
                 onClick={() => handleMenuClick("metalFabrication")}
               >
@@ -51,7 +53,9 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <a
-                className={`menu-item ${selectedItem === "laserCutting" ? "selected" : ""}`}
+                className={`menu-item ${
+                  selectedItem === "laserCutting" ? "selected" : ""
+                }`}
                 href="#"
                 onClick={() => handleMenuClick("laserCutting")}
               >
@@ -60,7 +64,9 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <a
-                className={`menu-item ${selectedItem === "laserWelding" ? "selected" : ""}`}
+                className={`menu-item ${
+                  selectedItem === "laserWelding" ? "selected" : ""
+                }`}
                 href="#"
                 onClick={() => handleMenuClick("laserWelding")}
               >
@@ -69,7 +75,9 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <a
-                className={`menu-item ${selectedItem === "gallery" ? "selected" : ""}`}
+                className={`menu-item ${
+                  selectedItem === "gallery" ? "selected" : ""
+                }`}
                 href="#"
                 onClick={() => handleMenuClick("gallery")}
               >
@@ -78,7 +86,9 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <a
-                className={`menu-item ${selectedItem === "contactUs" ? "selected" : ""}`}
+                className={`menu-item ${
+                  selectedItem === "contactUs" ? "selected" : ""
+                }`}
                 href="#"
                 onClick={() => handleMenuClick("contactUs")}
               >
@@ -89,6 +99,9 @@ const Navbar: React.FC = () => {
               <div className="contact-info">
                 <i className="fas fa-phone-alt"></i>
                 <span>PHONE: 905.671.1677</span>
+              </div>
+              <div className="quote-btn-container">
+                <button className="quote-btn">REQUEST A QUOTE</button>
               </div>
             </li>
           </ul>

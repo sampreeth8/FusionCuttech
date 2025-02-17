@@ -32,10 +32,10 @@ const HomePage: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
   useEffect(() => {
-    // Change image every 5 seconds
+    // Change image every 15 seconds
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 15000); // Change every 5000ms (5 seconds)
+    }, 15000); // Change every 15000ms (15 seconds)
 
     return () => clearInterval(intervalId); // Clear interval on component unmount
   }, []);
@@ -55,29 +55,23 @@ const HomePage: React.FC = () => {
   return (
     <div>
       {/* Request a Quote Button */}
-      <div className="absolute top-4 right-4 z-20">
-        <button className=" quote-btn bg-yellow-500 text-black font-bold py-2 px-4">
-          REQUEST A QUOTE
-        </button>
-      </div>
+      {/* <div className="quote-btn-container">
+        <button className="quote-btn">REQUEST A QUOTE</button>
+      </div> */}
 
       {/* Banner Section */}
-      <div className="relative w-full h-96">
+      <div className="banner-container">
         <img
           alt="Background image"
-          className="w-full h-full object-cover"
-          height="600"
-          src={images[currentImageIndex]} // Dynamic background image
+          className="background-image"
+          src={images[currentImageIndex]}
           width="1536"
+          height="600"
         />
-        {/* Content Overlay */}
+        {/* Overlay */}
         <div className="overlay">
-          <h1 className="text-white text-4xl font-bold mb-4 text-right">
-            <i>{content[currentImageIndex].title}</i>
-          </h1>
-          <p className="text-white text-lg mb-6 description">
-            {content[currentImageIndex].description}
-          </p>
+          <h1><i>{content[currentImageIndex].title}</i></h1>
+          <p className="description">{content[currentImageIndex].description}</p>
         </div>
 
         {/* Navigation Arrows */}
