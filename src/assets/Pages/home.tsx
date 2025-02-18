@@ -23,9 +23,9 @@ const HomePage: React.FC = () => {
         "We use the latest technology in laser cutting to achieve precise edges and high-quality finishes.",
     },
     {
-      title: "Metal Fabrication",
+      title: "FusionCut Technologies",
       description:
-        "At Metal Tronics Inc., we combine our industry skills, 40 years of experience and state-of-the-art equipment to manufacture quality products at competitive prices.",
+        "At FusionCut Technologies., we combine our industry skills, 40 years of experience and state-of-the-art equipment to manufacture quality products at competitive prices.",
     },
   ];
 

@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Microsoft Sans Serif", sans-serif; /* Apply globally */
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Microsoft Sans Serif", sans-serif; /* Apply to body */
     background-color: #f4f4f4;
 }
 
@@ -58,6 +59,7 @@ h1 {
     font-size: 3rem;
     margin-bottom: 30px;
     margin-left: 100px;
+    font-family: "Microsoft Sans Serif", sans-serif; /* Ensure h1 uses it */
 }
 
 .description {
@@ -66,6 +68,7 @@ h1 {
     line-height: 1.5;
     margin-left: 100px;
     padding-bottom: 240px;
+    font-family: "Microsoft Sans Serif", sans-serif;
 }
 
 /* Navigation Arrows */
@@ -142,16 +145,19 @@ h1 {
     color: #333;
     line-height: 1.6;
     margin-bottom: 15px;
+    font-family: "Microsoft Sans Serif", sans-serif;
 }
 
 .about-text a {
     color: #ffbc2c;
     text-decoration: none;
     font-weight: bold;
+    font-family: "Microsoft Sans Serif", sans-serif;
 }
 
 .about-text a:hover {
     text-decoration: underline;
+    font-family: "Microsoft Sans Serif", sans-serif;
 }
 
 /* ✅ Right Image - Ensure Full Image is Displayed */
