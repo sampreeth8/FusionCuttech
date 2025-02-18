@@ -34,7 +34,9 @@ const Navbar: React.FC = () => {
           <li>
             <a
               className={`header__menu-link ${
-                selectedItem === "companyProfile" ? "header__menu-link--active" : ""
+                selectedItem === "companyProfile"
+                  ? "header__menu-link--active"
+                  : ""
               }`}
               href="#"
               onClick={() => handleMenuClick("companyProfile")}
@@ -45,7 +47,9 @@ const Navbar: React.FC = () => {
           <li>
             <a
               className={`header__menu-link ${
-                selectedItem === "metalFabrication" ? "header__menu-link--active" : ""
+                selectedItem === "metalFabrication"
+                  ? "header__menu-link--active"
+                  : ""
               }`}
               href="#"
               onClick={() => handleMenuClick("metalFabrication")}
@@ -56,7 +60,9 @@ const Navbar: React.FC = () => {
           <li>
             <a
               className={`header__menu-link ${
-                selectedItem === "laserCutting" ? "header__menu-link--active" : ""
+                selectedItem === "laserCutting"
+                  ? "header__menu-link--active"
+                  : ""
               }`}
               href="#"
               onClick={() => handleMenuClick("laserCutting")}
@@ -99,7 +105,7 @@ const Navbar: React.FC = () => {
           </li>
           <li className="header__menu-item header__phone">
             <i className="fas fa-phone-alt"></i>
-            <span> PHONE: 905.671.1677</span>
+            <span> PHONE: 289.933.7005</span>
           </li>
           {/* Request Quote Button Inside <li> But Positioned Correctly */}
           <li className="header__menu-item header__quote-btn-container">
