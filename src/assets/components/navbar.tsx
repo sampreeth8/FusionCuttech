@@ -12,100 +12,100 @@ const Navbar: React.FC = () => {
 
   return (
     <header className="header">
-      <div className="header-layout">
-        <div className="logo-container">
+      <div className="header__layout">
+        {/* Logo Section */}
+        <a href="/" className="header__logo">
           <img alt="FUSIONCUTTECH" className="logo" src={logo} />
-        </div>
-        <nav className="nav-menu">
-          <ul className="menu-list">
-            <li>
-              <a
-                className={`menu-item ${
-                  selectedItem === "home" ? "selected" : ""
-                }`}
-                href="#"
-                onClick={() => handleMenuClick("home")}
-              >
-                HOME
-              </a>
-            </li>
-            <li>
-              <a
-                className={`menu-item ${
-                  selectedItem === "companyProfile" ? "selected" : ""
-                }`}
-                href="#"
-                onClick={() => handleMenuClick("companyProfile")}
-              >
-                COMPANY PROFILE
-              </a>
-            </li>
-            <li>
-              <a
-                className={`menu-item ${
-                  selectedItem === "metalFabrication" ? "selected" : ""
-                }`}
-                href="#"
-                onClick={() => handleMenuClick("metalFabrication")}
-              >
-                METAL FABRICATION
-              </a>
-            </li>
-            <li>
-              <a
-                className={`menu-item ${
-                  selectedItem === "laserCutting" ? "selected" : ""
-                }`}
-                href="#"
-                onClick={() => handleMenuClick("laserCutting")}
-              >
-                LASER CUTTING
-              </a>
-            </li>
-            <li>
-              <a
-                className={`menu-item ${
-                  selectedItem === "laserWelding" ? "selected" : ""
-                }`}
-                href="#"
-                onClick={() => handleMenuClick("laserWelding")}
-              >
-                LASER WELDING
-              </a>
-            </li>
-            <li>
-              <a
-                className={`menu-item ${
-                  selectedItem === "gallery" ? "selected" : ""
-                }`}
-                href="#"
-                onClick={() => handleMenuClick("gallery")}
-              >
-                GALLERY
-              </a>
-            </li>
-            <li>
-              <a
-                className={`menu-item ${
-                  selectedItem === "contactUs" ? "selected" : ""
-                }`}
-                href="#"
-                onClick={() => handleMenuClick("contactUs")}
-              >
-                CONTACT US
-              </a>
-            </li>
-            <li>
-              <div className="contact-info">
-                <i className="fas fa-phone-alt"></i>
-                <span>PHONE: 905.671.1677</span>
-              </div>
-              <div className="quote-btn-container">
-                <button className="quote-btn">REQUEST A QUOTE</button>
-              </div>
-            </li>
-          </ul>
-        </nav>
+        </a>
+
+        {/* Navigation Menu - All Options Inside <li> */}
+        <ul className="header__menu">
+          <li>
+            <a
+              className={`header__menu-link ${
+                selectedItem === "home" ? "header__menu-link--active" : ""
+              }`}
+              href="#"
+              onClick={() => handleMenuClick("home")}
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              className={`header__menu-link ${
+                selectedItem === "companyProfile" ? "header__menu-link--active" : ""
+              }`}
+              href="#"
+              onClick={() => handleMenuClick("companyProfile")}
+            >
+              Company Profile
+            </a>
+          </li>
+          <li>
+            <a
+              className={`header__menu-link ${
+                selectedItem === "metalFabrication" ? "header__menu-link--active" : ""
+              }`}
+              href="#"
+              onClick={() => handleMenuClick("metalFabrication")}
+            >
+              Metal Fabrication
+            </a>
+          </li>
+          <li>
+            <a
+              className={`header__menu-link ${
+                selectedItem === "laserCutting" ? "header__menu-link--active" : ""
+              }`}
+              href="#"
+              onClick={() => handleMenuClick("laserCutting")}
+            >
+              Laser Cutting
+            </a>
+          </li>
+          <li>
+            <a
+              className={`header__menu-link ${
+                selectedItem === "welding" ? "header__menu-link--active" : ""
+              }`}
+              href="#"
+              onClick={() => handleMenuClick("welding")}
+            >
+              Welding
+            </a>
+          </li>
+          <li>
+            <a
+              className={`header__menu-link ${
+                selectedItem === "gallery" ? "header__menu-link--active" : ""
+              }`}
+              href="#"
+              onClick={() => handleMenuClick("gallery")}
+            >
+              Gallery
+            </a>
+          </li>
+          <li>
+            <a
+              className={`header__menu-link ${
+                selectedItem === "contactUs" ? "header__menu-link--active" : ""
+              }`}
+              href="#"
+              onClick={() => handleMenuClick("contactUs")}
+            >
+              Contact Us
+            </a>
+          </li>
+          <li className="header__menu-item header__phone">
+            <i className="fas fa-phone-alt"></i>
+            <span> PHONE: 905.671.1677</span>
+          </li>
+          {/* Request Quote Button Inside <li> But Positioned Correctly */}
+          <li className="header__menu-item header__quote-btn-container">
+            <button className="header__quote-btn">REQUEST A QUOTE</button>
+          </li>
+        </ul>
       </div>
     </header>
   );

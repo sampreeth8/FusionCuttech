@@ -1,4 +1,4 @@
-/* Normalize some default styles to ensure consistency across browsers */
+/* ✅ Preserve existing styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,84 +10,65 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Fix Request a Quote Button Placement */
-/* Fix Request a Quote Button Placement */
-.quote-btn-container {
-    position: fixed;
-    top: 16.25%; /* Center vertically in the navbar */
-    right: 50px; /* Align it properly */
-    transform: translateY(-50%); /* Adjust to center it perfectly */
-    z-index: 100;
+/* ✅ Prevent Navbar & Banner Overlapping */
+.homepage-container {
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling issues */
 }
 
-/* Request a Quote Button Styling */
-.quote-btn {
-    background-color: #eab308; /* Match reference color */
-    color: black;
-    font-weight: bold;
-    padding: 12px 24px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-transform: uppercase;
-    border-radius: 3px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Hover Effect */
-.quote-btn:hover {
-    background-color: #ffcc00;
-}
-
-
-/* Banner Section */
+/* ✅ Banner Section */
 .banner-container {
     position: relative;
     width: 100%;
-    height: 70vh; /* 60% of the viewport height */
+    height: 70vh;
+    margin-top: 90px; /* Prevent navbar overlap */
+    overflow: hidden; /* Ensures clean layout */
 }
 
+/* Background Image */
 .background-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute; /* Keep the image behind the overlay */
+    position: absolute;
     top: 0;
     left: 0;
+    z-index: -1; /* Keeps it behind content */
 }
 
+/* Overlay */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Ensure it covers the whole banner */
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the content vertically */
-    align-items: flex-start; /* Align the content to the left */
+    justify-content: center;
+    align-items: flex-start;
     z-index: 10;
 }
 
+/* Title & Description */
 h1 {
-    font-size: 3rem; /* Maintain original size */
+    font-size: 3rem;
     margin-bottom: 30px;
-    /* padding-bottom: 200px; */
     margin-left: 100px;
 }
 
 .description {
-    font-size: 1.125rem; /* Same as original */
-    max-width: 30%; /* Decrease width to allow the text to wrap */
+    font-size: 1.125rem;
+    max-width: 30%;
     line-height: 1.5;
     margin-left: 100px;
     padding-bottom: 240px;
 }
 
+/* Navigation Arrows */
 .nav-arrow {
     position: absolute;
     top: 50%;
@@ -113,34 +94,128 @@ h1 {
     right: 3%;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .quote-btn {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
+/* ✅ New Section Below Banner */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ffffff;
+    /* border-top: 3px solid #ddd;
+    border-bottom: 5px solid #003366; */
+}
 
+/* ✅ Content Wrapper */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 90%;
+}
+
+/* ✅ Title with Blue Bar */
+.section-title {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #1d1d1d;
+    margin-bottom: 20px;
+}
+
+.blue-bar {
+    width: 5px;
+    height: 50px;
+    background-color: #003366;
+    margin-right: 15px;
+}
+
+/* ✅ Left Text Content */
+.about-text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-text a {
+    color: #ffbc2c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-text a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Right Image - Ensure Full Image is Displayed */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px; /* Adjust width to ensure full image is visible */
+}
+
+/* ✅ Make Sure Whole Image is Visible */
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the entire image fits without cropping */
+    border-radius: 0; /* Remove rounding */
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
     .banner-container {
-        height: 50vh; /* Reduce banner height on smaller screens */
+        height: 50vh;
     }
 
     .overlay {
         padding: 15px;
         top: 10%;
         left: 10%;
-        max-width: 80%; /* Expand text width on smaller screens */
+        max-width: 80%;
     }
 
     h1 {
-        font-size: 5vw; /* Adjust title size */
+        font-size: 5vw;
     }
 
     .description {
-        font-size: 3vw; /* Adjust description size */
+        font-size: 3vw;
     }
 
     .nav-arrow {
         font-size: 2rem;
+    }
+
+    /* Responsive About Section */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-title {
+        justify-content: center;
+    }
+
+    .about-text {
+        padding-right: 0;
+    }
+
+    .about-image {
+        max-width: 100%; /* Ensure image does not get cut off */
+    }
+
+    .about-image img {
+        height: auto;
     }
 }
 
@@ -149,25 +224,23 @@ h1 {
         top: 15%;
         left: 5%;
         padding: 10px;
-        max-width: 90%; /* Allow even more room for text on very small screens */
+        max-width: 90%;
     }
 
     h1 {
-        font-size: 6vw; /* Further reduce title font size */
+        font-size: 6vw;
     }
 
     .description {
-        font-size: 4vw; /* Adjust description size further */
-    }
-
-    .quote-btn {
-        font-size: 0.8rem;
-        padding: 6px 14px;
+        font-size: 4vw;
     }
 
     .nav-arrow {
         font-size: 2rem;
         top: 30%;
     }
-}
 
+    .blue-bar {
+        height: 50px;
+    }
+}

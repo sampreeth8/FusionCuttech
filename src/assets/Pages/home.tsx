@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/HomePage.css"; // Importing the CSS file
+import logo from "../images/homeCompany.jpg";
 
 const HomePage: React.FC = () => {
   // Array of background images
@@ -53,13 +54,8 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div>
-      {/* Request a Quote Button */}
-      {/* <div className="quote-btn-container">
-        <button className="quote-btn">REQUEST A QUOTE</button>
-      </div> */}
-
-      {/* Banner Section */}
+    <div className="homepage-container">
+      {/* ✅ Banner Section */}
       <div className="banner-container">
         <img
           alt="Background image"
@@ -81,6 +77,42 @@ const HomePage: React.FC = () => {
         <button className="nav-arrow right-arrow" onClick={nextImage}>
           ❯
         </button>
+      </div>
+
+      {/* ✅ New Section Below Banner (Matches Reference Image) */}
+      <div className="about-section">
+        <div className="about-content">
+          {/* Left Side Content */}
+          <div className="about-text">
+            <h2 className="section-title">
+              <span className="blue-bar"></span> 
+              <i>Industry Leader in Metal Manufacturing</i>
+            </h2>
+            <p>
+            Fusioncut Technologies. has been a trusted name in metal manufacturing for over 40 years, providing comprehensive solutions tailored to our customers’ needs. From concept to completion, we handle every aspect of the process-including design, prototyping, fabrication, and testing to ensure top-quality results.
+            </p>
+            <p>
+            Our facility is equipped with cutting-edge automation technology, allowing us to enhance efficiency, precision, and production speed. In addition to delivering high-quality products, we are committed to sustainability. Our processes are designed to minimize waste, optimize energy use, and reduce environmental impact.
+            </p>
+            <p>
+            As part of our commitment to a greener future, we have adopted eco-friendly practices such as integrating energy-efficient laser machines, reusing packaging materials, and transitioning to a digital production system to cut down on paper waste. These initiatives help us lower our carbon footprint while maintaining high manufacturing standards.
+            </p>
+            <p>
+            In recent years, we have embraced technological advancements that have revolutionized our production methods, benefiting both our workforce and our clients. By implementing automation, we have significantly improved efficiency, enabling us to offer faster turnaround times and cost-effective metal fabrication services.
+            </p>
+            <p>
+            With rapid growth and expansion in Toronto, Metal Tronics is dedicated to pushing the boundaries of innovation. We continue to invest in our capabilities to serve our customers better, providing superior products and solutions that drive success.
+            </p>
+          </div>
+
+          {/* Right Side Image */}
+          <div className="about-image">
+            <img
+              src={logo}
+              alt="Metal Fabrication"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

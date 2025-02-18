@@ -1,158 +1,133 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 
+/* Navbar Container */
 .header {
   width: 100%;
-  height: 115px; /* Fixed height for the navbar */
+  height: 115px; /* Match the reference image */
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  border-bottom: 2px solid #ddd;
-  position: relative; /* Required to position the yellow line above */
+  border-bottom: 1px solid #ddd;
+  position: fixed; /* Ensures navbar stays fixed on top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.header-layout {
+/* Navbar Layout */
+.header__layout {
   width: 100%;
-  max-width: 1400px; /* Ensure navbar content is not stretched too wide */
+  max-width: 1400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px; /* Decreased padding on both sides */
-  height: 100%; /* Ensure header takes full height */
+  padding: 0 20px;
+  height: 100%;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
+/* Logo */
+.header__logo img {
+  width: auto;
+  max-height: 110px; /* Match reference */
 }
 
-.logo {
-  width: auto; /* Use original logo size */
-  max-height: 80px; /* Ensure the logo fits well */
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-}
-
-.menu-list {
-  display: flex;
-  gap: 20px; /* Set equal space between each menu item */
-  list-style-type: none; /* Remove default list styles */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  position: relative; /* To position the yellow line above */
-}
-
-.menu-item {
-  text-decoration: none;
-  color: black; /* Default menu item color */
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: color 0.3s ease-in-out;
-  position: relative; /* Required for absolute positioning of the yellow line */
-}
-
-.menu-item:hover {
-  color: #1d5199; /* Change color on hover */
-}
-
-/* Yellow line for selected menu item */
-.menu-item.selected::after {
-  content: "";
-  position: absolute;
-  bottom: 60px; /* Position the yellow line just above the menu item */
-  left: 0;
-  width: 110%;
-  height: 5px;
-  background-color: #f0a500; /* Yellow line */
-}
-
-.contact-info {
-  display: flex;
-  align-items: center;
-  color: #000000;
-  font-weight: bold;
-}
-
-.contact-info i {
-  margin-right: 5px;
-}
-
-@media (max-width: 768px) {
-  .header-layout {
-    padding: 0 15px;
-  }
-
-  .nav-menu {
-    flex-direction: column; /* Stack the items vertically on smaller screens */
-    gap: 10px;
-  }
-
-  .menu-list {
-    flex-direction: column; /* Stack the list items vertically */
-    gap: 10px;
-  }
-}
-
-/* ✅ FIXED "REQUEST A QUOTE" BUTTON */
-
-/* Ensure the request quote button stays inside the navbar */
-.quote-btn-container {
+/* Navigation Menu */
+.header__menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: auto; /* Push the button to the right */
+  list-style: none;
+  flex-grow: 1; /* Ensures even spacing */
+  margin: 0;
+  padding: 0;
   position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* Button Styling */
-.quote-btn {
-  background-color: #ffbc2c !important;
-  color: black !important;
-  font-weight: bold !important;
-  padding: 12px 24px !important;
-  font-size: 1rem !important;
-  border: none !important;
-  cursor: pointer !important;
-  transition: background-color 0.3s ease !important;
-  text-transform: uppercase !important;
-  border-radius: 3px !important;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
-  white-space: nowrap !important; /* Prevents button text from breaking */
+/* Navbar Items */
+.header__menu-item {
+  position: relative; /* Needed for absolute positioning of the yellow line */
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
 }
+
+/* Navbar Links */
+.header__menu-link {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.header__menu-link:hover {
+  color: #1d5199;
+}
+
+/* Active Link */
+.header__menu-link--active {
+  font-weight: bold;
+  position: relative; /* Required for the yellow line */
+}
+
+/* ✅ Yellow Line Above Selected Menu Item */
+.header__menu-link--active::before {
+  content: "";
+  position: absolute;
+  top: -40px; /* Moves the yellow line above the menu item */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px; /* Adjust width as needed */
+  height: 6px; /* Thickness of the line */
+  background-color: #ffbc2c; /* Yellow color */
+  border-radius: 2px; /* Smooth rounded edges */
+  transition: all 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Phone Number */
+.header__phone {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.header__phone i {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+/* ✅ FIXED "REQUEST A QUOTE" BUTTON - POSITIONED CORRECTLY */
+/* Increase size of the button */
+.header__quote-btn {
+    padding: 16px 32px; /* Increased padding for larger button */
+    font-size: 16px; /* Increased font size */
+    font-weight: bold;
+    border: none;
+    position: absolute;
+    right: 6%;
+    bottom: -112px; 
+    cursor: pointer;
+    background-color: #ffbc2c;
+    color: black;
+    text-transform: uppercase;
+    /* border-radius: 5px; */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    transition: background-color 0.3s ease-in-out;
+    min-width: 180px; /* Ensures consistent width */
+    min-height: 55px; /* Ensures consistent height */
+  }
+  
+  
 
 /* Button Hover Effect */
-.quote-btn:hover {
-  background-color: #1d5199 !important;
-}
-
-/* Ensuring navbar layout stays intact */
-.header-layout {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1400px;
-  padding: 0 20px;
-  height: 100%;
-  flex-wrap: nowrap; /* Prevents wrapping when zooming out */
-}
-
-/* Fixing button when zooming out */
-.nav-right-section {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  white-space: nowrap; /* Ensures everything stays in one line */
-}
-
-/* Fixing issue when page zooms out */
-@media (min-width: 1400px) {
-  .header-layout {
-    max-width: 90%;
-  }
+.header__quote-btn:hover {
+  background-color: #1d5199;
+  color: white;
 }
