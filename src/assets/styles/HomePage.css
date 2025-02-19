@@ -21,7 +21,7 @@ body {
 .banner-container {
     position: relative;
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     margin-top: 90px; /* Prevent navbar overlap */
     overflow: hidden; /* Ensures clean layout */
 }
@@ -68,6 +68,7 @@ h1 {
     line-height: 1.5;
     margin-left: 100px;
     padding-bottom: 240px;
+    
     font-family: "Microsoft Sans Serif", sans-serif;
 }
 
@@ -145,6 +146,7 @@ h1 {
     color: #333;
     line-height: 1.6;
     margin-bottom: 15px;
+    font-size: clamp(14px, 1.2vw, 24px);
     font-family: "Microsoft Sans Serif", sans-serif;
 }
 
@@ -176,6 +178,117 @@ h1 {
     object-fit: contain; /* Ensures the entire image fits without cropping */
     border-radius: 0; /* Remove rounding */
 }
+
+
+
+/* ✅ Services Section */
+.services-section {
+    background-color: #004c9b; /* Dark blue background */
+    color: white;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* ✅ Services Content Layout */
+.services-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 90%;
+}
+
+/* ✅ Left Side - Title & Description */
+.services-text {
+    flex: 1;
+    padding-right: 40px;
+    max-width: 40%;
+}
+
+.services-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.services-text p {
+    line-height: 1.6;
+    color: #e0e0e0;
+    font-size: clamp(14px, 1.2vw, 24px)
+}
+
+/* ✅ Vertical Divider */
+.services-divider {
+    width: 3px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 50px;
+}
+
+/* ✅ Services List */
+.services-list {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+/* ✅ Individual Service Columns */
+.services-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ✅ Custom Checkmark Styling */
+.services-column p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: white;
+    font-size: clamp(14px, 1.2vw, 24px);
+    display: flex;
+    align-items: center;
+}
+
+/* ✅ Checkmark Icon Styling */
+.services-column img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services-text {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .services-divider {
+        height: 3px;
+        width: 100px;
+        margin: 20px 0;
+    }
+
+    .services-list {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-column {
+        align-items: center;
+    }
+}
+
+
 
 /* ✅ Responsive Styles */
 @media (max-width: 768px) {

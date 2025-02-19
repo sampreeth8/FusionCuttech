@@ -66,8 +66,12 @@ const HomePage: React.FC = () => {
         />
         {/* Overlay */}
         <div className="overlay">
-          <h1><i>{content[currentImageIndex].title}</i></h1>
-          <p className="description">{content[currentImageIndex].description}</p>
+          <h1>
+            <i>{content[currentImageIndex].title}</i>
+          </h1>
+          <p className="description">
+            {content[currentImageIndex].description}
+          </p>
         </div>
 
         {/* Navigation Arrows */}
@@ -85,32 +89,202 @@ const HomePage: React.FC = () => {
           {/* Left Side Content */}
           <div className="about-text">
             <h2 className="section-title">
-              <span className="blue-bar"></span> 
+              <span className="blue-bar"></span>
               <i>Industry Leader in Metal Manufacturing</i>
             </h2>
             <p>
-            Fusioncut Technologies. has been a trusted name in metal manufacturing for over 40 years, providing comprehensive solutions tailored to our customers’ needs. From concept to completion, we handle every aspect of the process-including design, prototyping, fabrication, and testing to ensure top-quality results.
+              Fusioncut Technologies. has been a trusted name in metal
+              manufacturing for over 40 years, providing comprehensive solutions
+              tailored to our customers’ needs. From concept to completion, we
+              handle every aspect of the process-including design, prototyping,
+              fabrication, and testing to ensure top-quality results.
             </p>
             <p>
-            Our facility is equipped with cutting-edge automation technology, allowing us to enhance efficiency, precision, and production speed. In addition to delivering high-quality products, we are committed to sustainability. Our processes are designed to minimize waste, optimize energy use, and reduce environmental impact.
+              Our facility is equipped with cutting-edge automation technology,
+              allowing us to enhance efficiency, precision, and production
+              speed. In addition to delivering high-quality products, we are
+              committed to sustainability. Our processes are designed to
+              minimize waste, optimize energy use, and reduce environmental
+              impact.
             </p>
             <p>
-            As part of our commitment to a greener future, we have adopted eco-friendly practices such as integrating energy-efficient laser machines, reusing packaging materials, and transitioning to a digital production system to cut down on paper waste. These initiatives help us lower our carbon footprint while maintaining high manufacturing standards.
+              As part of our commitment to a greener future, we have adopted
+              eco-friendly practices such as integrating energy-efficient laser
+              machines, reusing packaging materials, and transitioning to a
+              digital production system to cut down on paper waste. These
+              initiatives help us lower our carbon footprint while maintaining
+              high manufacturing standards.
             </p>
             <p>
-            In recent years, we have embraced technological advancements that have revolutionized our production methods, benefiting both our workforce and our clients. By implementing automation, we have significantly improved efficiency, enabling us to offer faster turnaround times and cost-effective metal fabrication services.
+              In recent years, we have embraced technological advancements that
+              have revolutionized our production methods, benefiting both our
+              workforce and our clients. By implementing automation, we have
+              significantly improved efficiency, enabling us to offer faster
+              turnaround times and cost-effective metal fabrication services.
             </p>
             <p>
-            With rapid growth and expansion in Toronto, Metal Tronics is dedicated to pushing the boundaries of innovation. We continue to invest in our capabilities to serve our customers better, providing superior products and solutions that drive success.
+              With rapid growth and expansion in Toronto, Metal Tronics is
+              dedicated to pushing the boundaries of innovation. We continue to
+              invest in our capabilities to serve our customers better,
+              providing superior products and solutions that drive success.
             </p>
           </div>
 
           {/* Right Side Image */}
           <div className="about-image">
-            <img
-              src={logo}
-              alt="Metal Fabrication"
-            />
+            <img src={logo} alt="Metal Fabrication" />
+          </div>
+        </div>
+      </div>
+      {/* ✅ Services Section */}
+      <div className="services-section">
+        <div className="services-container">
+          {/* Left Side - Title & Description */}
+          <div className="services-text">
+            <h2>
+              <i>Our Services</i>
+            </h2>
+            <p>
+              At <b>FusionCut Technologies</b>, we specialize in precision
+              manufacturing solutions tailored to meet the diverse needs of our
+              clients. Our expertise extends across multiple industries,
+              providing high-quality services with a commitment to **innovation,
+              accuracy, and efficiency**.
+            </p>
+          </div>
+
+          {/* Vertical Divider */}
+          <div className="services-divider"></div>
+
+          {/* Right Side - Services List */}
+          <div className="services-list">
+            <div className="services-column">
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Manufacturing
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Construction
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Transportation
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Telecom
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Medical
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Retail
+              </p>
+            </div>
+
+            <div className="services-column">
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Design
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Consulting
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Laser Cutting
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Fabrication
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                CNC Machining (5 Axis)
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Metal Bending
+              </p>
+            </div>
+
+            <div className="services-column">
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Self-clenching
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Tapping
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Saw Cutting
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Forming
+              </p>
+              <p>
+                <img
+                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
+                  alt="✔"
+                />{" "}
+                Assembly
+              </p>
+            </div>
           </div>
         </div>
       </div>

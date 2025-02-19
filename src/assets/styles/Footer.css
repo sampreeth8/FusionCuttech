@@ -1,0 +1,106 @@
+/* ✅ Footer Styling */
+.footer {
+    background: url('https://www.metaltronics.ca/img/backgrounds/mt_footer-bg.jpg') no-repeat center center/cover;
+    color: #1a1a1a; /* Darker text for better contrast */
+    padding: 50px 0;
+    padding-bottom: 0px;
+    font-family: "Microsoft Sans Serif", sans-serif;
+}
+
+/* ✅ Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+/* ✅ Footer Columns */
+.footer-column {
+    width: 22%;
+    min-width: 250px;
+}
+
+/* ✅ Footer Headings */
+.footer-column h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #e67e22; /* Warm orange for visibility */
+}
+
+/* ✅ Underline below headings */
+.footer-underline {
+    width: 50px;
+    height: 3px;
+    background-color: #e67e22;
+    margin-bottom: 15px;
+}
+
+/* ✅ Sitemap Grid (Two Rows of 6 Items Each) */
+.sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.sitemap-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sitemap-grid ul li {
+    margin: 10px 0;
+}
+
+.sitemap-grid ul li a {
+    color: #333333; /* Dark Gray for high contrast */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+.sitemap-grid ul li a:hover {
+    color: #e67e22;
+}
+
+/* ✅ Footer Text */
+.footer-column p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #2c2c2c; /* Adjusted for better visibility */
+}
+
+/* ✅ Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 30px;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: white;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sitemap-grid {
+        grid-template-columns: 1fr;
+    }
+}
