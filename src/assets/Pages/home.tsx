@@ -1,31 +1,30 @@
 import React, { useState, useEffect } from "react";
 import "../styles/HomePage.css"; // Importing the CSS file
 import logo from "../images/homeCompany.jpg";
+import hero1 from "../images/weldingBanner.jpg";
+import hero2 from "../images/lasercuttingBanner.jpg";
+import hero3 from "../images/fabricationBanner.jpg";
 
 const HomePage: React.FC = () => {
   // Array of background images
-  const images: string[] = [
-    "https://www.metaltronics.ca/img/backgrounds/mt_hero-slide-bg-3.jpg",
-    "https://www.metaltronics.ca/img/backgrounds/mt_hero-slide-bg-2.jpg",
-    "https://www.metaltronics.ca/img/backgrounds/mt_hero-slide-bg-1.jpg",
-  ];
+  const images: string[] = [hero1, hero2, hero3];
 
   // Array of content that corresponds to each image
   const content = [
     {
-      title: "Customer Service",
+      title: "Welding",
       description:
-        "Boasting 40 years of industry experience, we provide our clients with quality and personalized service no one can match.",
+        "Welding precision into every project, one bead at a time.Strength and quality, built to last a lifetime.",
     },
     {
       title: "Laser Cutting",
       description:
-        "We use the latest technology in laser cutting to achieve precise edges and high-quality finishes.",
+        "We leverage the latest laser tech for metal cutting that's precise, efficient, and delivers unmatched quality.",
     },
     {
-      title: "FusionCut Technologies",
+      title: "Metal Fabrication",
       description:
-        "At FusionCut Technologies., we combine our industry skills, 40 years of experience and state-of-the-art equipment to manufacture quality products at competitive prices.",
+        "We forge quality and built trust, one weld at a time.Custom metal work, crafted just for you",
     },
   ];
 
