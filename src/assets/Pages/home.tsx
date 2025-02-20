@@ -157,7 +157,8 @@ const HomePage: React.FC = () => {
 
           {/* Right Side - Services List */}
           <div className="services-list">
-            <div className="services-column">
+            <div className="services-column industry-column">
+              <p className="services-title">Our Diverse Range Of Industries</p>
               <p>
                 <img
                   src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
@@ -203,6 +204,7 @@ const HomePage: React.FC = () => {
             </div>
 
             <div className="services-column">
+              <p style={{ paddingBottom: "32px" }}></p>
               <p>
                 <img
                   src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
@@ -248,6 +250,7 @@ const HomePage: React.FC = () => {
             </div>
 
             <div className="services-column">
+            <p style={{ paddingBottom: "32px" }}></p>
               <p>
                 <img
                   src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
@@ -261,13 +264,6 @@ const HomePage: React.FC = () => {
                   alt="✔"
                 />{" "}
                 Tapping
-              </p>
-              <p>
-                <img
-                  src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
-                  alt="✔"
-                />{" "}
-                Saw Cutting
               </p>
               <p>
                 <img

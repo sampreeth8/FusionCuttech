@@ -15,9 +15,13 @@ const Navbar: React.FC = () => {
     <header className="header">
       <div className="header__layout">
         {/* ✅ Logo Section (Now Includes Image Logo + Text Logo) */}
-        <a href="/" className="header__logo">
+        {/* <a href="/" className="header__logo">
           <img alt="FUSIONCUTTECH" className="logo" src={logo} />
-        </a>
+        </a> */}
+        <div className="header__logo-container">
+          <img alt="FusionCut Logo" className="logo" src={logo} />
+          <span className="company-name">FusionCut Technologies</span>
+        </div>
 
         {/* ✅ Navigation Menu */}
         <ul className="header__menu">

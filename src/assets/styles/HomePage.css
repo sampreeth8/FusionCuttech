@@ -62,8 +62,21 @@ h1 {
     font-family: "Microsoft Sans Serif", sans-serif; /* Ensure h1 uses it */
 }
 
+
+  /* Fixes the first column without affecting others */
+.industry-column {
+    text-align: left; /* Keeps alignment consistent */
+  }
+  
+  .industry-column p {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Ensures proper spacing */
+  }
+  
+  
 .description {
-    font-size: 1.125rem;
+    font-size: 1.40rem;
     max-width: 30%;
     line-height: 1.5;
     margin-left: 100px;
