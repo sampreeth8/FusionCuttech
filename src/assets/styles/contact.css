@@ -1,0 +1,230 @@
+/* ✅ Contact Page Styling */
+.contact-page {
+    width: 100%;
+    font-family: "Arial", sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* ✅ Contact Banner - Only for Contact Page */
+  .contact-banner-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+  }
+  
+  /* ✅ Contact Page Background Image */
+  .contact-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* ✅ Overlay (Fades Starting from the "Us" Side) */
+  .contact-banner-overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    border-radius: 5px;
+    margin-right: 90px;
+  }
+  
+  /* ✅ Yellow Line */
+  .contact-yellow-line {
+    width: 6px;
+    height: 60%;
+    background-color: #e69e00;
+    margin-right: 10px;
+  }
+  
+  /* ✅ "Contact Us" Text */
+  .contact-banner-text {
+    color: white;
+    font-size: clamp(30px, 4vw, 60px);
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* ✅ Contact Details & Map Section */
+  .contact-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1530px;
+    /* margin: 10px 10px; */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ✅ Left Side - Contact Info */
+  .contact-info {
+    width: 45%;
+    padding-left: 160px;
+  }
+  
+  .contact-info h2 {
+    font-size: 2rem;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+
+
+  
+  
+  .contact-info h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  /* ✅ Right Side - Google Map */
+  .map-container {
+    width: 70%;
+  }
+  
+  .map-container iframe {
+    width: 92%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+  }
+
+  /* ✅ Contact Form Section */
+.contact-form-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 0; /* Increased padding for better spacing */
+    background-color: #18587a; /* Dark blue background */
+}
+
+.contact-form-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 30px;
+    background: #18587a;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-header {
+    background: #18587a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px; /* Added spacing */
+}
+
+.contact-form {
+    padding: 20px;
+    background: #18587a;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased spacing between form fields */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Increased gap for better spacing */
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-textarea {
+    height: 120px; /* Increased textarea height */
+}
+
+/* ✅ File Upload Styling */
+.file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-input {
+    flex: 1;
+    border-radius: 5px 0 0 5px;
+}
+
+.file-btn {
+    background: #d9d9d9;
+    color: #8d8d8d;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.file-btn:hover {
+    background: #ccc;
+}
+
+/* ✅ Centering the Send Message Button */
+.submit-btn-container {
+    display: flex;
+    justify-content: center; /* Center aligns the button */
+    margin-top: 25px; /* Added space above the button */
+}
+
+.submit-btn {
+    background: #e69e00;
+    color: white;
+    padding: 14px 30px; /* Increased button size */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background: #d18b00;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .contact-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info,
+    .map-container {
+        width: 100%;
+    }
+
+    .contact-banner-overlay {
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 10px; /* Adjusted for mobile spacing */
+    }
+}

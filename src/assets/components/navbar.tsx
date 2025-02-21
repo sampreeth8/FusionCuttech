@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from React Router
 import "../styles/Navbar.css"; // Importing the CSS file
 import logo from "../images/companylogo.jpg";
-// Import the new text logo image
 
 const Navbar: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<string>("home");
@@ -14,10 +14,7 @@ const Navbar: React.FC = () => {
   return (
     <header className="header">
       <div className="header__layout">
-        {/* ✅ Logo Section (Now Includes Image Logo + Text Logo) */}
-        {/* <a href="/" className="header__logo">
-          <img alt="FUSIONCUTTECH" className="logo" src={logo} />
-        </a> */}
+        {/* ✅ Logo Section (Includes Image Logo + Text Logo) */}
         <div className="header__logo-container">
           <img alt="FusionCut Logo" className="logo" src={logo} />
           <span className="company-name">FusionCut Technologies</span>
@@ -26,87 +23,87 @@ const Navbar: React.FC = () => {
         {/* ✅ Navigation Menu */}
         <ul className="header__menu">
           <li>
-            <a
+            <Link
               className={`header__menu-link ${
                 selectedItem === "home" ? "header__menu-link--active" : ""
               }`}
-              href="#"
+              to="/"
               onClick={() => handleMenuClick("home")}
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className={`header__menu-link ${
                 selectedItem === "companyProfile"
                   ? "header__menu-link--active"
                   : ""
               }`}
-              href="#"
+              to="/company-profile"
               onClick={() => handleMenuClick("companyProfile")}
             >
               Company Profile
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className={`header__menu-link ${
                 selectedItem === "metalFabrication"
                   ? "header__menu-link--active"
                   : ""
               }`}
-              href="#"
+              to="/metal-fabrication"
               onClick={() => handleMenuClick("metalFabrication")}
             >
               Metal Fabrication
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className={`header__menu-link ${
                 selectedItem === "laserCutting"
                   ? "header__menu-link--active"
                   : ""
               }`}
-              href="#"
+              to="/laser-cutting"
               onClick={() => handleMenuClick("laserCutting")}
             >
               Laser Cutting
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className={`header__menu-link ${
                 selectedItem === "welding" ? "header__menu-link--active" : ""
               }`}
-              href="#"
+              to="/welding"
               onClick={() => handleMenuClick("welding")}
             >
               Welding
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className={`header__menu-link ${
                 selectedItem === "gallery" ? "header__menu-link--active" : ""
               }`}
-              href="#"
+              to="/gallery"
               onClick={() => handleMenuClick("gallery")}
             >
               Gallery
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className={`header__menu-link ${
                 selectedItem === "contactUs" ? "header__menu-link--active" : ""
               }`}
-              href="#"
+              to="/contact"
               onClick={() => handleMenuClick("contactUs")}
             >
               Contact Us
-            </a>
+            </Link>
           </li>
           <li className="header__menu-item header__phone">
             <i className="fas fa-phone-alt"></i>
