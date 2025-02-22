@@ -196,6 +196,7 @@
     padding: 14px 30px; /* Increased button size */
     border: none;
     border-radius: 5px;
+    margin-left: 250px;
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease-in-out;

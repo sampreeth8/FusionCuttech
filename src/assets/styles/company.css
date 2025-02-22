@@ -1,0 +1,487 @@
+/* ✅ Scoped Styles for Company Profile Page */
+.company-profile-container {
+    width: 100%;
+    font-family: "Arial", sans-serif;
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+/* ✅ Banner Section */
+.company-banner-wrapper {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.company-banner-img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.company-banner-text-overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    border-radius: 5px;
+    margin-right: 80px;
+    margin-bottom: 45px;
+}
+
+.company-yellow-divider {
+    width: 6px;
+    height: 60%;
+    background-color: #e69e00;
+    margin-right: 10px;
+}
+
+.company-banner-title {
+    color: white;
+    font-size: clamp(30px, 4vw, 60px);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* ✅ About Section */
+.about-company-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* ✅ Section Header */
+.company-section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  
+}
+
+.company-blue-bar {
+    width: 6px;
+    height: 35px;
+    background-color: #004c9b;
+    margin-right: 12px;
+}
+
+.company-section-title {
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.about-welcome__text {
+    -moz-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 3rem;
+    column-gap: 3rem;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #333;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ✅ Improve readability with spacing between paragraphs */
+.about-welcome__text p {
+    margin-bottom: 20px;
+}
+
+
+/* ✅ Services Section */
+.services-section-cp {
+    background-color: #18587a; /* Dark blue background */
+    color: white;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* ✅ Services Content Layout */
+.services-container-cp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 90%;
+}
+
+/* ✅ Left Side - Title & Description */
+.services-text-cp {
+    padding-right: 40px;
+    max-width: 40%;
+}
+
+.services-text-cp h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.services-text-cp p {
+    line-height: 1.6;
+    color: #e0e0e0;
+    font-size: clamp(14px, 1.2vw, 24px)
+}
+
+/* ✅ Vertical Divider */
+.services-divider {
+    width: 3px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 50px;
+}
+
+/* ✅ Services List */
+.services-list {
+    flex: 2;
+    display: flex;
+    justify-content:space-evenly ;
+    width: 60%;
+}
+
+/* ✅ Individual Service Columns */
+.services-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ✅ Custom Checkmark Styling */
+.services-column p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: white;
+    font-size: clamp(14px, 1.2vw, 24px);
+    display: flex;
+    align-items: center;
+}
+
+/* ✅ Checkmark Icon Styling */
+.services-column img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+.industry-columncp{
+    padding-top: 35px;
+    text-align: left;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services-text {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .services-divider {
+        height: 3px;
+        width: 100px;
+        margin: 20px 0;
+    }
+
+    .services-list {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-column {
+        align-items: center;
+    }
+}
+
+
+
+
+/* ✅ Adjusts column layout for smaller screens */
+@media (max-width: 1024px) {
+    .about-welcome__text {
+        column-count: 1;
+        text-align: left;
+    }
+}
+
+/* ✅ Styling for highlighted words or links */
+.fc-accent-2 {
+    color: #004c9b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.fc-accent-2:hover {
+    text-decoration: underline;
+}
+
+
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .company-banner-text-overlay {
+        margin-left: 20px;
+    }
+
+    .company-info-container {
+        grid-template-columns: 1fr; /* Stack paragraphs for mobile */
+        text-align: left;
+    }
+}
+
+
+/* ✅ Precision & Efficiency Section */
+.precision-section {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+/* ✅ Precision Content Layout */
+.precision-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 90%;
+}
+
+/* ✅ Left Side - Text */
+.precision-text {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 40px;
+}
+
+.precision-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* ✅ Contact & Action Buttons */
+.precision-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    width: max-content;
+}
+
+/* ✅ Individual Action Items */
+.precision-action {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ✅ SVG Icons Styling */
+.precision-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #e69e00; /* Gold color */
+}
+
+/* ✅ Right Side - Image */
+.precision-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: right;
+}
+
+.precision-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* ✅ Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+    .precision-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .precision-text {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .precision-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .precision-action {
+        margin: 10px 15px;
+    }
+
+    .precision-image {
+        max-width: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+
+/* ✅ Consultation Banner Section */
+.banner {
+    position: relative;
+    width: 100%;
+    background-color: var(--accent-color);
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ✅ Overlay Effect */
+.banner__overlay {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, var(--accent-color) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* ✅ Facility Section */
+.facility-container {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facility-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+/* ✅ Left - Facility Text */
+.facility-text {
+    flex: 1;
+    max-width: 30%;
+    padding-right: 40px;
+}
+
+.facility-title {
+    font-size: 28px;
+    font-weight: bold;
+    border-left: 4px solid #1d5199;
+    padding-left: 10px;
+}
+
+.facility-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* ✅ Button */
+.facility-button {
+    border: 2px solid #1d5199;
+    color: #1d5199;
+    background: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.facility-button:hover {
+    background-color: #1d5199;
+    color: white;
+}
+
+/* ✅ Right - Facility Images */
+.facility-images {
+    flex: 2;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    max-width: 65%;
+}
+
+.facility-images img {
+    width: 33%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .facility-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .facility-text {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .facility-images {
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .facility-images img {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .facility-images img {
+        width: 100%;
+    }
+}
+
+
+/* ✅ Ensure link color matches other items */
+.precision-action-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+    font-weight: normal;
+}
+
+
+/* ✅ On hover, only change the text color slightly */
+.precision-action-link:hover span {
+    color: #1d5199; /* Change only text on hover, keep icon same */
+}

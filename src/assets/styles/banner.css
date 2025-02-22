@@ -1,0 +1,84 @@
+/* ✅ Scoped Consultation Banner Section */
+.animated-banner {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(to right, #18587a 60%, #18587a 40%);
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ✅ CSS-Only Blueprint Overlay Effect */
+.animated-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(rgba(255, 255, 255, 0.1) 10%, transparent 70%);
+    opacity: 0.3; /* Light overlay effect */
+}
+
+/* ✅ Banner Content Layout */
+.animated-banner-container {
+    max-width: 1400px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    height: fit-content;
+}
+
+/* ✅ Banner Text Styling */
+.animated-banner__text h3 {
+    font-size: 28px;
+    font-weight: normal;
+    font-style: italic;
+    color: white;
+    text-align: left;
+}
+
+/* ✅ Highlighting Specific Words */
+.animated-banner-highlight {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ✅ Contact Button */
+.animated-banner__button {
+    background-color: #ffbc2c;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    margin-right: 80px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+/* ✅ Hover Effect */
+.animated-banner__button:hover {
+    background-color: #ffcc00;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .animated-banner-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .animated-banner__text h3 {
+        text-align: center;
+    }
+
+    .animated-banner__button {
+        margin-top: 20px;
+    }
+}
