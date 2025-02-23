@@ -1,0 +1,279 @@
+/* ✅ Cutting Page Layout */
+.cutting-page {
+    width: 100%;
+    background-color: white;
+}
+
+/* ✅ Keep Cutting Banner Unchanged */
+.cutting-banner-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.cutting-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cutting-banner-overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    border-radius: 5px;
+    margin-right: 90px;
+}
+
+.cutting-yellow-line {
+    width: 6px;
+    height: 60%;
+    background-color: #e69e00;
+    margin-right: 10px;
+}
+
+.cutting-banner-text {
+    color: white;
+    font-size: clamp(30px, 4vw, 60px);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* ✅ Container to ensure correct alignment */
+.cutting-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 600px;
+}
+
+/* ✅ Left Side - Proper Text Alignment */
+.cutting-text {
+    flex: 1;
+    padding: 0px 60px;
+    text-align: left;
+}
+
+/* ✅ Title */
+.cutting-title {
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    font-size: clamp(30px, 4vw, 40px);
+    margin-bottom: 30px;
+}
+
+/* ✅ Blue Border */
+.cutting-border {
+    width: 6px;
+    height: 30px;
+    background-color: #1d5199;
+    margin-right: 12px;
+}
+
+.cutting-border-metal {
+    width: 6px;
+    height: 30px;
+    background-color: #e69e00;
+    margin-right: 12px;
+}
+
+/* ✅ Description */
+.cutting-description {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ✅ List of Materials */
+.cutting-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cutting-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.cutting-icon {
+    color: #e69e00;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* ✅ Divider */
+
+
+/* ✅ Contact Information (Aligned Properly) */
+.precision-actions-cutting {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    width: max-content;
+}
+
+/* ✅ Individual Action Items */
+.precision-action-cutting {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ✅ SVG Icons Styling */
+.precision-icon-cutting {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #e69e00;
+}
+
+/* ✅ Ensure link color matches other items */
+.precision-action-link-cutting {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+}
+
+/* ✅ On hover, only change the text color slightly */
+.precision-action-link-cutting:hover span {
+    color: #1d5199;
+}
+
+/* ✅ Right Side - Image (Remains Unchanged) */
+.cutting-image-container {
+    flex: 1;
+    height: 100%;
+}
+
+.cutting-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 1024px) {
+    .cutting-content {
+        flex-direction: column;
+    }
+
+    .cutting-text {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .precision-actions-cutting {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* ✅ Sheet Metal Cutting Section */
+.sheet-metal-container-cutting {
+    display: flex;
+}
+
+/* ✅ Left Side - Grid of Images */
+.sheet-metal-images-cutting {
+    width: 59.5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.sheet-metal-img-cutting {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ✅ Right Side - Blue Section */
+.sheet-metal-info-cutting {
+    width: 50%;
+    background: #18587a;
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* ✅ Title Styling */
+.sheet-metal-title-cutting {
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    font-size: clamp(30px, 4vw, 40px);
+    margin-bottom: 30px;
+}
+
+/* ✅ Paragraph Styling */
+.sheet-metal-info-cutting p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ✅ Highlighted Text */
+.fc-accent-2-steel-cutting {
+    color: #e69e00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.fc-accent-2-steel-cutting:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Button Styling */
+.sheet-metal-btn-cutting {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sheet-metal-btn-cutting:hover {
+    background: white;
+    color: #18587a;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .sheet-metal-container-cutting {
+        flex-direction: column;
+    }
+
+    .sheet-metal-images-cutting {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sheet-metal-info-cutting {
+        width: 100%;
+        text-align: center;
+    }
+}

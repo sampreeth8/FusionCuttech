@@ -254,7 +254,7 @@ const CompanyProfile = () => {
               <div className="precision-action">
                 <Link to="/contact" className="precision-action-link">
                   <FaPhoneAlt className="precision-icon" />
-                  CALL US: <strong>905-671-1677</strong>
+                  CALL US: <strong>289-933-7005</strong>
                 </Link>
               </div>
               <div className="precision-action">

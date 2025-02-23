@@ -36,27 +36,27 @@ const Navbar: React.FC = () => {
           <li>
             <Link
               className={`header__menu-link ${
-                selectedItem === "companyProfile"
+                selectedItem === "aboutus"
                   ? "header__menu-link--active"
                   : ""
               }`}
-              to="/company-profile"
-              onClick={() => handleMenuClick("companyProfile")}
+              to="/about-us"
+              onClick={() => handleMenuClick("aboutus")}
             >
-              Company Profile
+              About Us
             </Link>
           </li>
           <li>
             <Link
               className={`header__menu-link ${
-                selectedItem === "metalFabrication"
+                selectedItem === "fabrication"
                   ? "header__menu-link--active"
                   : ""
               }`}
-              to="/metal-fabrication"
-              onClick={() => handleMenuClick("metalFabrication")}
+              to="/fabrication"
+              onClick={() => handleMenuClick("fabrication")}
             >
-              Metal Fabrication
+              Fabrication
             </Link>
           </li>
           <li>

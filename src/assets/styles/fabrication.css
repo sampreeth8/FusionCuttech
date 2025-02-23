@@ -1,0 +1,337 @@
+/* ✅ Fabrication Page Layout */
+.fabrication-page {
+    width: 100%;
+    background-color: white;
+}
+
+/* ✅ Keep Fabrication Banner Unchanged */
+.fabrication-banner-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.fabrication-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fabrication-banner-overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    border-radius: 5px;
+    margin-right: 90px;
+}
+
+.fabrication-yellow-line {
+    width: 6px;
+    height: 60%;
+    background-color: #e69e00;
+    margin-right: 10px;
+}
+
+.fabrication-banner-text {
+    color: white;
+    font-size: clamp(30px, 4vw, 60px);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* ✅ Container to ensure correct alignment */
+.fabrication-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 650px;
+}
+
+/* ✅ Left Side - Proper Text Alignment */
+.fabrication-text {
+    flex: 1;
+    padding: 0px 60px; /* Adjusted for correct spacing */
+    text-align: left;
+}
+
+/* ✅ Title */
+.fabrication-title {
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    font-size: clamp(30px, 4vw, 40px);
+    margin-bottom: 30px;
+}
+
+/* ✅ Blue Border */
+.fabrication-border {
+    width: 6px;
+    height: 30px;
+    background-color: #1d5199;
+    margin-right: 12px;
+}
+
+.fabrication-border-metal {
+    width: 6px;
+    height: 30px;
+    background-color: #e69e00;;
+    margin-right: 12px;
+}
+
+/* ✅ Description */
+.fabrication-description {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ✅ List of Materials */
+.fabrication-list {
+    list-style: none;
+    padding: 0;
+}
+
+.fabrication-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.fabrication-icon {
+    color: #e69e00;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* ✅ Divider
+.fabrication-divider {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+} */
+
+/* ✅ Contact Information (Aligned Properly) */
+.fabrication-contact {
+    display: flex;
+    justify-content: flex-start; /* Ensures proper alignment */
+    gap: 30px;
+    font-size: 16px;
+}
+
+/* ✅ Uniform spacing */
+.fabrication-contact div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ✅ Link Styling */
+.fabrication-link {
+    color: #1d5199;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.fabrication-link:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Right Side - Image (Remains Unchanged) */
+.fabrication-image-container {
+    flex: 1;
+    height: 100%;
+}
+
+.fabrication-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 1024px) {
+    .fabrication-content {
+        flex-direction: column;
+    }
+
+    .fabrication-text {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .fabrication-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* ✅ Contact & Action Buttons */
+.precision-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    width: max-content;
+}
+
+/* ✅ Individual Action Items */
+.precision-action {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ✅ SVG Icons Styling */
+.precision-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #e69e00; /* Gold color */
+}
+
+/* ✅ Ensure link color matches other items */
+.precision-action-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+    font-weight: normal;
+}
+
+
+/* ✅ On hover, only change the text color slightly */
+.precision-action-link:hover span {
+    color: #1d5199; /* Change only text on hover, keep icon same */
+}
+
+/* ✅ Sheet Metal Section */
+.sheet-metal-container {
+    display: flex;
+    
+}
+
+/* ✅ Left Side - Grid of Images */
+.sheet-metal-images {
+    width: 59.5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+
+}
+
+.sheet-metal-img {
+    width: 100%;
+    max-height: 340px; /* Adjust this value as needed */
+    object-fit: cover;
+}
+
+
+/* ✅ Right Side - Blue Section */
+.sheet-metal-info {
+    width: 50%;
+    background: #18587a;
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* ✅ Title Styling */
+.sheet-metal-title {
+
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    font-size: clamp(30px, 4vw, 40px);
+    margin-bottom: 30px;
+}
+
+/* ✅ Yellow Divider */
+.yellow-divider {
+    color: #e69e00;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+/* ✅ Paragraph Styling */
+.sheet-metal-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ✅ Highlighted Text */
+.highlight-text {
+    color: #e69e00;
+    font-weight: bold;
+}
+
+/* ✅ Button Styling */
+.sheet-metal-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sheet-metal-btn:hover {
+    background: white;
+    color: #18587a;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .sheet-metal-container {
+        flex-direction: column;
+    }
+
+    .sheet-metal-images {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sheet-metal-info {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.par__text-link {
+    margin-top: 35px;
+    display: inline-block;
+    border: 1px solid var(--accent-color);
+    padding: 10px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    color: var(--accent-color);
+    transition: 0.3s ease-in-out;
+}
+
+.fc-accent-2-steel {
+    color: #e69e00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.fc-accent-2-steel:hover {
+    text-decoration: underline;
+}
