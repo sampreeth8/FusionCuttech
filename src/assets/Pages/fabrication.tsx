@@ -159,7 +159,7 @@ const Fabrication: React.FC = () => {
           </p>
           <p>
             <a href="/metal-fabrication" className="fc-accent-2-steel">
-              At FusionCut Inc.,
+              At FUSIONCUT Inc.,
             </a>{" "}
             , we don't just fabricate metal; we forge solutions that drive
             industries forward. Let us bring your vision to life with our
