@@ -291,10 +291,10 @@ const CompanyProfile = () => {
               energy-efficient equipment, advanced automation, robust quality
               control systems, and streamlined waste reduction processes.
             </p>
-            <a href="/gallery">
+            <Link to="/gallery">
               {" "}
               <button className="facility-button">View more &gt;</button>
-            </a>
+            </Link>
           </div>
 
           {/* Right - Images */}

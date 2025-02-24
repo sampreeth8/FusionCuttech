@@ -10,6 +10,7 @@ import gall4 from "../images/cutting/cutting10.webp";
 import gall5 from "../images/fab/fab3.jfif";
 import gall8 from "../images/fab/fab12.jfif";
 import gall6 from "../images/welding/welding3.jfif";
+import { Link } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   // Array of background images
@@ -298,10 +299,9 @@ const HomePage: React.FC = () => {
             fabrication projects over the years. Explore this gallery to see our
             completed works and products.
           </p>
-          <a href="/gallery">
-            {" "}
-            <button className="home-view-more-btn">View more &gt;</button>
-          </a>
+          <Link to="/gallery">
+          <button className="home-view-more-btn">View more &gt;</button>
+          </Link>
         </div>
 
         {/* ✅ Gallery Grid */}
