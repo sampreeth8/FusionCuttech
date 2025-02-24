@@ -300,7 +300,7 @@ const HomePage: React.FC = () => {
           </p>
           <a href="/gallery">
             {" "}
-            <button className="home-view-more-btn">View More</button>
+            <button className="home-view-more-btn">View more &gt;</button>
           </a>
         </div>
 
