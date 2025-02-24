@@ -182,23 +182,6 @@ const Fabrication: React.FC = () => {
       <div className="fabrication-content">
         {/* ✅ Left Side - Fabrication Info */}
         <div className="fabrication-text">
-          {/* <p className="fabrication-description">
-            Our team of skilled technicians, innovative designers, and
-            experienced personnel brings a wealth of knowledge to every project,
-            regardless of its complexity or scale. We've successfully executed
-            countless metal fabrication projects, consistently delivering
-            solutions that not only meet but exceed client expectations.
-          </p>
-          <p className="fabrication-description">
-            <b>Tailored Solutions for Every Client</b>
-          </p>
-
-          <p className="fabrication-description">
-            At FUSIONCUT, we recognize that each client comes with distinct
-            requirements, production volumes, and deadlines. Our
-            state-of-the-art facilities and advanced capabilities enable us to
-            handle:
-          </p> */}
           <p className="fabrication-description">
             <b>Our Commitment to Excellence</b>
           </p>
