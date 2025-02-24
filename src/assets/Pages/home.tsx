@@ -4,6 +4,12 @@ import logo from "../images/homeCompany.jpg";
 import hero1 from "../images/weldingBanner.jpg";
 import hero2 from "../images/lasercuttingBanner.jpg";
 import hero3 from "../images/fabricationBanner.jpg";
+import AnimatedBanner from "../components/AnimatedBanner";
+import gall1 from "../images/cutting/cutting6.jfif";
+import gall4 from "../images/cutting/cutting10.webp";
+import gall5 from "../images/fab/fab3.jfif";
+import gall8 from "../images/fab/fab12.jfif";
+import gall6 from "../images/welding/welding3.jfif";
 
 const HomePage: React.FC = () => {
   // Array of background images
@@ -203,8 +209,8 @@ const HomePage: React.FC = () => {
               </p>
             </div>
 
-            <div className="services-column">
-              <p style={{ paddingBottom: "32px" }}></p>
+            <div className="services-column industry-column">
+              <p className="services-title">Our Diverse Range Of Services</p>
               <p>
                 <img
                   src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
@@ -250,7 +256,7 @@ const HomePage: React.FC = () => {
             </div>
 
             <div className="services-column">
-            <p style={{ paddingBottom: "32px" }}></p>
+              <p style={{ paddingBottom: "32px" }}></p>
               <p>
                 <img
                   src="https://www.metaltronics.ca/img/icons/fa_checkmark.svg"
@@ -283,6 +289,66 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className="home-gallery">
+        {/* ✅ Gallery Heading & Description */}
+        <div className="home-gallery-header">
+          <h1 className="home-gallery-title">Gallery</h1>
+          <p className="home-gallery-description">
+            FUSIONCUT Inc. has delivered a wide range of laser cutting and
+            fabrication projects over the years. Explore this gallery to see our
+            completed works and products.
+          </p>
+          <a href="/gallery">
+            {" "}
+            <button className="home-view-more-btn">View More</button>
+          </a>
+        </div>
+
+        {/* ✅ Gallery Grid */}
+        <div className="home-gallery-grid">
+          <img
+            src={gall1}
+            alt="Stack of metal plates with labels"
+            className="home-gallery-image"
+          />
+          <img
+            src="https://storage.googleapis.com/a1aa/image/VfmHjOlV-ooqrXAmKibcE7B3wiM2eN2KXa_X2hlFlKQ.jpg"
+            alt="Metal fabrication machine"
+            className="home-gallery-image"
+          />
+          <img
+            src="https://storage.googleapis.com/a1aa/image/lG88HVUyapE-51N__qGeEYox6c2SQfUTd0d54X7uixM.jpg"
+            alt="Person welding metal"
+            className="home-gallery-image"
+          />
+          <img
+            src={gall4}
+            alt="Laser cutting machine in action"
+            className="home-gallery-image"
+          />
+          <img
+            src={gall5}
+            alt="Stack of metal boxes with cutouts"
+            className="home-gallery-image"
+          />
+          <img
+            src={gall6}
+            alt="Worker operating a metal fabrication machine"
+            className="home-gallery-image"
+          />
+          <img
+            src="https://storage.googleapis.com/a1aa/image/HMnvKMkZZgoDEMsomRxD6C7JvS-n3lD-MnLKJ-g9AIk.jpg"
+            alt="Laser cutting machine working on metal"
+            className="home-gallery-image"
+          />
+          <img
+            src={gall8}
+            alt="Stack of metal boxes"
+            className="home-gallery-image"
+          />
+        </div>
+      </div>
+      <AnimatedBanner />
     </div>
   );
 };

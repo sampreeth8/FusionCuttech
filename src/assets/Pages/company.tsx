@@ -71,7 +71,7 @@ const CompanyProfile = () => {
           exploring greener production methods, including the use of renewable
           hydrogen and sustainable carbon sources, to transform European
           production of critical raw materials like silicon and manganese and{" "}
-          <a href="/metal-fabrication" className="fc-accent-2">
+          <a href="/fabrication" className="fc-accent-2">
             About Metal Fabrication
           </a>{" "}
           services to our clients.

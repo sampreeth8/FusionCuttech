@@ -1,6 +1,7 @@
 // import React from "react";
 import "../styles/contact.css";
 import contactbanner from "../images/ccc.jpg";
+import AnimatedBanner from "../components/AnimatedBanner";
 
 const Contact = () => {
   return (
@@ -87,6 +88,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <AnimatedBanner />
     </div>
   );
 };

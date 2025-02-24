@@ -10,9 +10,11 @@ import sheetMetal3 from "../images/metalSheet3.jpg";
 import { FaFileInvoice, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AnimatedBanner from "../components/AnimatedBanner";
+import RequestQuote from "./RequestQuote";
 // Update with actual image path
 
 const Fabrication: React.FC = () => {
+  const [isQuoteOpen, setIsQuoteOpen] = React.useState(false);
   return (
     <div className="fabrication-page">
       {/* ✅ Fabrication Banner (Unchanged) */}
@@ -81,7 +83,11 @@ const Fabrication: React.FC = () => {
               </Link>
             </div>
             <div className="precision-action">
-              <Link to="/contact" className="precision-action-link">
+              <Link
+                className="precision-action-link"
+                onClick={() => setIsQuoteOpen(true)}
+                to={""}
+              >
                 <FaFileInvoice className="precision-icon" />
                 <span>REQUEST A QUOTE</span>
               </Link>
@@ -231,7 +237,11 @@ const Fabrication: React.FC = () => {
               </Link>
             </div>
             <div className="precision-action">
-              <Link to="/contact" className="precision-action-link">
+              <Link
+                className="precision-action-link"
+                onClick={() => setIsQuoteOpen(true)}
+                to={""}
+              >
                 <FaFileInvoice className="precision-icon" />
                 <span>REQUEST A QUOTE</span>
               </Link>
@@ -260,6 +270,10 @@ const Fabrication: React.FC = () => {
         </div>
       </div>
       <AnimatedBanner />
+      <RequestQuote
+        isOpen={isQuoteOpen}
+        onClose={() => setIsQuoteOpen(false)}
+      />
     </div>
   );
 };

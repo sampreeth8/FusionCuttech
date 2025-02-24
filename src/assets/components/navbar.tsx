@@ -1,121 +1,130 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from React Router
-import "../styles/Navbar.css"; // Importing the CSS file
+import React from "react";
+import { Link, useLocation } from "react-router-dom"; // ✅ Import useLocation
+import "../styles/Navbar.css";
 import logo from "../images/companylogo.jpg";
+import RequestQuote from "../Pages/RequestQuote";
 
 const Navbar: React.FC = () => {
-  const [selectedItem, setSelectedItem] = useState<string>("home");
-
-  // Handle menu item click
-  const handleMenuClick = (item: string) => {
-    setSelectedItem(item);
-  };
+  const [isQuoteOpen, setIsQuoteOpen] = React.useState(false);
+  const location = useLocation(); // ✅ Get current URL path
 
   return (
-    <header className="header">
-      <div className="header__layout">
-        {/* ✅ Logo Section (Includes Image Logo + Text Logo) */}
-        <div className="header__logo-container">
-          <img alt="FusionCut Logo" className="logo" src={logo} />
-          <span className="company-name">FusionCut Technologies</span>
-        </div>
+    <>
+      <header className="header">
+        <div className="header__layout">
+          {/* ✅ Logo Section */}
+          <div className="header__logo-container">
+            <img alt="FusionCut Logo" className="logo" src={logo} />
+            <span className="company-name">FusionCut Technologies</span>
+          </div>
 
-        {/* ✅ Navigation Menu */}
-        <ul className="header__menu">
-          <li>
-            <Link
-              className={`header__menu-link ${
-                selectedItem === "home" ? "header__menu-link--active" : ""
-              }`}
-              to="/"
-              onClick={() => handleMenuClick("home")}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`header__menu-link ${
-                selectedItem === "aboutus"
-                  ? "header__menu-link--active"
-                  : ""
-              }`}
-              to="/about-us"
-              onClick={() => handleMenuClick("aboutus")}
-            >
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`header__menu-link ${
-                selectedItem === "fabrication"
-                  ? "header__menu-link--active"
-                  : ""
-              }`}
-              to="/fabrication"
-              onClick={() => handleMenuClick("fabrication")}
-            >
-              Fabrication
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`header__menu-link ${
-                selectedItem === "laserCutting"
-                  ? "header__menu-link--active"
-                  : ""
-              }`}
-              to="/laser-cutting"
-              onClick={() => handleMenuClick("laserCutting")}
-            >
-              Laser Cutting
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`header__menu-link ${
-                selectedItem === "welding" ? "header__menu-link--active" : ""
-              }`}
-              to="/welding"
-              onClick={() => handleMenuClick("welding")}
-            >
-              Welding
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`header__menu-link ${
-                selectedItem === "gallery" ? "header__menu-link--active" : ""
-              }`}
-              to="/gallery"
-              onClick={() => handleMenuClick("gallery")}
-            >
-              Gallery
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={`header__menu-link ${
-                selectedItem === "contactUs" ? "header__menu-link--active" : ""
-              }`}
-              to="/contact"
-              onClick={() => handleMenuClick("contactUs")}
-            >
-              Contact Us
-            </Link>
-          </li>
-          <li className="header__menu-item header__phone">
-            <i className="fas fa-phone-alt"></i>
-            <span> PHONE: 289.933.7005</span>
-          </li>
-          {/* ✅ Request Quote Button */}
-          <li className="header__menu-item header__quote-btn-container">
-            <button className="header__quote-btn">REQUEST A QUOTE</button>
-          </li>
-        </ul>
-      </div>
-    </header>
+          {/* ✅ Navigation Menu */}
+          <ul className="header__menu">
+            <li>
+              <Link
+                className={`header__menu-link ${
+                  location.pathname === "/" ? "header__menu-link--active" : ""
+                }`}
+                to="/"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`header__menu-link ${
+                  location.pathname === "/about-us"
+                    ? "header__menu-link--active"
+                    : ""
+                }`}
+                to="/about-us"
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`header__menu-link ${
+                  location.pathname === "/fabrication"
+                    ? "header__menu-link--active"
+                    : ""
+                }`}
+                to="/fabrication"
+              >
+                Fabrication
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`header__menu-link ${
+                  location.pathname === "/laser-cutting"
+                    ? "header__menu-link--active"
+                    : ""
+                }`}
+                to="/laser-cutting"
+              >
+                Laser Cutting
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`header__menu-link ${
+                  location.pathname === "/welding"
+                    ? "header__menu-link--active"
+                    : ""
+                }`}
+                to="/welding"
+              >
+                Welding
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`header__menu-link ${
+                  location.pathname === "/gallery"
+                    ? "header__menu-link--active"
+                    : ""
+                }`}
+                to="/gallery"
+              >
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`header__menu-link ${
+                  location.pathname === "/contact"
+                    ? "header__menu-link--active"
+                    : ""
+                }`}
+                to="/contact"
+              >
+                Contact Us
+              </Link>
+            </li>
+            <li className="header__menu-item header__phone">
+              <i className="fas fa-phone-alt"></i>
+              <span> PHONE: 289.933.7005</span>
+            </li>
+            {/* ✅ Request Quote Button */}
+            <li className="header__menu-item header__quote-btn-container">
+              <button
+                className="header__quote-btn"
+                onClick={() => setIsQuoteOpen(true)}
+              >
+                REQUEST A QUOTE
+              </button>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      {/* ✅ Render Quote Modal */}
+      <RequestQuote
+        isOpen={isQuoteOpen}
+        onClose={() => setIsQuoteOpen(false)}
+      />
+    </>
   );
 };
 

@@ -1,0 +1,141 @@
+/* ✅ Overlay Background */
+.quote-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* ✅ Modal Box - Increased Width & Height */
+.quote-modal {
+    position: relative;
+    width: 90%; /* Increased width */
+    max-width: 1100px; /* Increased max width */
+    height: 80vh; /* Increased height */
+    max-height: 750px; /* Ensures it doesn't get too large */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Hide overflow */
+}
+
+/* ✅ Background Image */
+.quote-background {
+    background: url("../images/quoto-bg.jpg") no-repeat center center; /* Background image */
+    background-size: cover;
+    padding: 60px; /* Increased padding */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ✅ Close Button */
+.quote-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* ✅ Title */
+.quote-title {
+    font-size: 36px; /* Increased font size */
+    font-weight: bold;
+    color: #ffbc2c;
+    margin-bottom: 30px; /* Increased spacing */
+    text-align: center;
+}
+
+/* ✅ Form Styling */
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Increased spacing between inputs */
+}
+
+/* ✅ Input Fields - Increased Size */
+.quote-form-group {
+    display: flex;
+    gap: 20px;
+}
+
+.quote-form-group input {
+    flex: 1;
+    padding: 18px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px; /* Increased font size */
+    background: rgba(255, 255, 255, 0.9); /* Slight white transparency */
+}
+
+/* ✅ Textarea - Increased Height */
+.quote-form textarea {
+    width: 100%;
+    height: 180px; /* Increased height */
+    padding: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* ✅ Submit Button - Increased Size */
+.quote-submit-btn {
+    width: 100%;
+    padding: 18px;
+    background: #ffbc2c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px; /* Increased font size */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.quote-submit-btn:hover {
+    background: #e69e00;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .quote-modal {
+        width: 95%;
+        height: auto;
+    }
+
+    .quote-background {
+        padding: 40px;
+    }
+
+    .quote-title {
+        font-size: 30px;
+    }
+
+    .quote-form-group {
+        flex-direction: column;
+    }
+
+    .quote-form-group input {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .quote-form textarea {
+        height: 150px;
+    }
+
+    .quote-submit-btn {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
