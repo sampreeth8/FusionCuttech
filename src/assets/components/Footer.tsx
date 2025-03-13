@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // ✅ Import Link from react-router-dom
 import "../styles/Footer.css"; // Import CSS file
 
 const Footer: React.FC = () => {
@@ -16,37 +17,31 @@ const Footer: React.FC = () => {
           </p>
         </div>
 
-        {/* ✅ Column 2 - Sitemap (Now Split into Two Rows - 6/6 Layout) */}
+        {/* ✅ Column 2 - Sitemap */}
         <div className="footer-column">
           <h3>SiteMap</h3>
           <div className="footer-underline"></div>
           <div className="sitemap-grid">
             <ul>
               <li>
-                <a href="#">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="#">Company Profile</a>
+                <Link to="/about-us">Company Profile</Link>
               </li>
               <li>
-                <a href="#">Metal Fabrication</a>
+                <Link to="/fabrication">Metal Fabrication</Link>
               </li>
               <li>
-                <a href="#">Laser Cutting</a>
+                <Link to="/laser-cutting">Laser Cutting</Link>
               </li>
               <li>
-                <a href="#">Gallery</a>
-              </li>
-              <li>
-                <a href="#">Request a Quote</a>
+                <Link to="/gallery">Gallery</Link>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="#">Contact Us</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
+                <Link to="/contact">Contact Us</Link>
               </li>
             </ul>
           </div>

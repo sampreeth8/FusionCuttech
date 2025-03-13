@@ -46,48 +46,6 @@ const Contact = () => {
           ></iframe>
         </div>
       </div>
-      {/* ✅ Contact Form Section (Second Div) */}
-      <div className="contact-form-section">
-        <div className="contact-form-container">
-          <div className="contact-form-header">
-            <p>
-              If you have any questions or feedback about our products and
-              services, please fill out the form below, and our team will reach
-              out to you shortly.
-            </p>
-          </div>
-          <form className="contact-form">
-            <div className="form-group">
-              <input type="text" placeholder="Name" className="form-input" />
-            </div>
-            <div className="form-group row">
-              <input
-                type="text"
-                placeholder="Phone number - e.g. 18885555555"
-                className="form-input"
-              />
-              <input type="email" placeholder="Email" className="form-input" />
-            </div>
-            <div className="form-group">
-              <textarea
-                placeholder="I am looking for"
-                className="form-textarea"
-              ></textarea>
-            </div>
-            <div className="form-group file-upload">
-              <input
-                type="text"
-                placeholder="Attach file"
-                className="form-input file-input"
-              />
-              <button className="file-btn">BROWSE</button>
-            </div>
-            <div className="form-group text-center">
-              <button className="submit-btn">Send a Message</button>
-            </div>
-          </form>
-        </div>
-      </div>
       <AnimatedBanner />
     </div>
   );

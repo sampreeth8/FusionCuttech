@@ -7,14 +7,12 @@ import cuttingSection24 from "../images/cuttingSection24.jpg";
 import cuttingSection21 from "../images/cuttingSection21.jpg";
 import cuttingSection22 from "../images/cuttingSection22.jpg";
 import cuttingSection23 from "../images/cuttingSection23.jpg";
-import { FaFileInvoice, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AnimatedBanner from "../components/AnimatedBanner";
-import RequestQuote from "./RequestQuote";
 // Update with actual image path
 
 const Cutting: React.FC = () => {
-  const [isQuoteOpen, setIsQuoteOpen] = React.useState(false);
   return (
     <div className="cutting-page">
       {/* ✅ Cutting Banner (Unchanged) */}
@@ -219,16 +217,6 @@ const Cutting: React.FC = () => {
               </Link>
             </div>
             <div className="precision-action-cutting">
-              <Link
-                className="precision-action-link"
-                onClick={() => setIsQuoteOpen(true)}
-                to={""}
-              >
-                <FaFileInvoice className="precision-icon" />
-                <span>REQUEST A QUOTE</span>
-              </Link>
-            </div>
-            <div className="precision-action-cutting">
               <a
                 href="https://www.google.com/maps/dir//21+Kenview+Blvd+%2329+Brampton,+ON+L6T+5G7/@43.73756,-79.64931,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x882b3b808ed14e9f:0xac94b3ffabf91a9a"
                 className="precision-action-link-cutting"
@@ -252,10 +240,6 @@ const Cutting: React.FC = () => {
         </div>
       </div>
       <AnimatedBanner />
-      <RequestQuote
-        isOpen={isQuoteOpen}
-        onClose={() => setIsQuoteOpen(false)}
-      />
     </div>
   );
 };

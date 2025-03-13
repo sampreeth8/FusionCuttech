@@ -7,14 +7,12 @@ import sheetMetal1 from "../images/sheetMetal1.jpg";
 import sheetMetal4 from "../images/sheetMetal4N.jpg";
 import sheetMetal2 from "../images/sheetMetal2N.jpg";
 import sheetMetal3 from "../images/metalSheet3.jpg";
-import { FaFileInvoice, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import {  FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AnimatedBanner from "../components/AnimatedBanner";
-import RequestQuote from "./RequestQuote";
 // Update with actual image path
 
 const Fabrication: React.FC = () => {
-  const [isQuoteOpen, setIsQuoteOpen] = React.useState(false);
   return (
     <div className="fabrication-page">
       {/* ✅ Fabrication Banner (Unchanged) */}
@@ -80,16 +78,6 @@ const Fabrication: React.FC = () => {
               <Link to="/contact" className="precision-action-link">
                 <FaPhoneAlt className="precision-icon" />
                 CALL US: <strong>289-933-7005</strong>
-              </Link>
-            </div>
-            <div className="precision-action">
-              <Link
-                className="precision-action-link"
-                onClick={() => setIsQuoteOpen(true)}
-                to={""}
-              >
-                <FaFileInvoice className="precision-icon" />
-                <span>REQUEST A QUOTE</span>
               </Link>
             </div>
             <div className="precision-action">
@@ -220,16 +208,6 @@ const Fabrication: React.FC = () => {
               </Link>
             </div>
             <div className="precision-action">
-              <Link
-                className="precision-action-link"
-                onClick={() => setIsQuoteOpen(true)}
-                to={""}
-              >
-                <FaFileInvoice className="precision-icon" />
-                <span>REQUEST A QUOTE</span>
-              </Link>
-            </div>
-            <div className="precision-action">
               <a
                 href="https://www.google.com/maps/dir//21+Kenview+Blvd+%2329+Brampton,+ON+L6T+5G7/@43.73756,-79.64931,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x882b3b808ed14e9f:0xac94b3ffabf91a9a"
                 className="precision-action-link"
@@ -253,10 +231,6 @@ const Fabrication: React.FC = () => {
         </div>
       </div>
       <AnimatedBanner />
-      <RequestQuote
-        isOpen={isQuoteOpen}
-        onClose={() => setIsQuoteOpen(false)}
-      />
     </div>
   );
 };

@@ -2,10 +2,8 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom"; // ✅ Import useLocation
 import "../styles/Navbar.css";
 import logo from "../images/companylogo.jpg";
-import RequestQuote from "../Pages/RequestQuote";
 
 const Navbar: React.FC = () => {
-  const [isQuoteOpen, setIsQuoteOpen] = React.useState(false);
   const location = useLocation(); // ✅ Get current URL path
 
   return (
@@ -106,24 +104,9 @@ const Navbar: React.FC = () => {
               <i className="fas fa-phone-alt"></i>
               <span> PHONE: 289.933.7005</span>
             </li>
-            {/* ✅ Request Quote Button */}
-            <li className="header__menu-item header__quote-btn-container">
-              <button
-                className="header__quote-btn"
-                onClick={() => setIsQuoteOpen(true)}
-              >
-                REQUEST A QUOTE
-              </button>
-            </li>
           </ul>
         </div>
       </header>
-
-      {/* ✅ Render Quote Modal */}
-      <RequestQuote
-        isOpen={isQuoteOpen}
-        onClose={() => setIsQuoteOpen(false)}
-      />
     </>
   );
 };

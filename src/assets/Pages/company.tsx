@@ -1,13 +1,11 @@
 import "../styles/company.css"; // Import Scoped CSS
 import companyProfileBanner from "../images/cpbanner.jpg"; // Update with actual image path
 import fusionCutMachine from "../images/cpinfo.png";
-import { FaPhoneAlt, FaMapMarkerAlt, FaFileInvoice } from "react-icons/fa";
+import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import AnimatedBanner from "../components/AnimatedBanner";
 import { Link } from "react-router-dom";
-import React from "react";
-import RequestQuote from "./RequestQuote";
+
 const CompanyProfile = () => {
-  const [isQuoteOpen, setIsQuoteOpen] = React.useState(false);
   return (
     <div className="company-profile-container">
       {/* ✅ Banner Section */}
@@ -260,17 +258,6 @@ const CompanyProfile = () => {
                   CALL US: <strong>289-933-7005</strong>
                 </Link>
               </div>
-
-              <div className="precision-action">
-                <Link
-                  className="precision-action-link"
-                  onClick={() => setIsQuoteOpen(true)}
-                  to={""}
-                >
-                  <FaFileInvoice className="precision-icon" />
-                  <span>REQUEST A QUOTE</span>
-                </Link>
-              </div>
               <div className="precision-action">
                 <Link to="/contact" className="precision-action-link">
                   <FaMapMarkerAlt className="precision-icon" />
@@ -322,10 +309,6 @@ const CompanyProfile = () => {
           </div>
         </div>
       </div>
-      <RequestQuote
-        isOpen={isQuoteOpen}
-        onClose={() => setIsQuoteOpen(false)}
-      />
     </div>
   );
 };

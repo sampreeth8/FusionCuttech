@@ -421,24 +421,42 @@ h1 {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-
-/* ✅ Gallery Grid */
+/* ✅ Fixed 4x4 Grid Layout */
 .home-gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* Always 4 columns */
+    grid-template-rows: repeat(2, auto); /* Always 2 rows */
     margin-top: 30px;
     padding: 0 20px;
+    justify-items: center;
+    align-items: center;
 }
 
 /* ✅ Gallery Images */
 .home-gallery-image {
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures full coverage without stretching */
     transition: transform 0.3s ease-in-out;
-    height: 310px;
-    object-fit: cover;
 }
 
 .home-gallery-image:hover {
     transform: scale(1.05);
 }
+
+/* ✅ Ensure it looks good on smaller screens */
+@media (max-width: 1024px) {
+    .home-gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on medium screens */
+        grid-template-rows: repeat(4, auto); /* Maintain 8 images */
+    }
+}
+
+@media (max-width: 600px) {
+    .home-gallery-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 image per row on small screens */
+        grid-template-rows: repeat(8, auto); /* Maintain 8 images */
+    }
+}
+
 
