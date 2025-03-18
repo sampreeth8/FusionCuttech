@@ -1,9 +1,78 @@
-// import React from "react";
-import "../styles/contact.css";
+import React, { useState } from "react";
+import "../styles/contact.css"; // Keep existing styles
 import contactbanner from "../images/ccc.jpg";
 import AnimatedBanner from "../components/AnimatedBanner";
 
-const Contact = () => {
+const Contact: React.FC = () => {
+  // ✅ Define Form State
+  const [formData, setFormData] = useState<{
+    name: string;
+    phone: string;
+    email: string;
+    message: string;
+    file: File | null;
+  }>({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+    file: null,
+  });
+
+  const [status, setStatus] = useState<string>(""); // ✅ Form Submission Status
+
+  // ✅ Handle Input Change (Now typed correctly)
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // // ✅ Handle File Selection (Now typed correctly)
+  // const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const file = e.target.files?.[0]; // Safely access the first file
+  //   if (file) {
+  //     setFormData((prev) => ({ ...prev, file }));
+  //   }
+  // };
+
+  // ✅ Handle Form Submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    // e.preventDefault();
+    // setStatus("Sending...");
+    // if (!formData.file) {
+    //   setStatus("Please attach a file.");
+    //   return;
+    // }
+    // const reader = new FileReader();
+    // reader.readAsDataURL(formData.file);
+    // reader.onload = async () => {
+    //   if (reader.result && typeof reader.result === "string") {
+    //     const base64String = reader.result.split(",")[1]; // ✅ Fix "split" issue
+    //     const payload = new URLSearchParams();
+    //     payload.append("name", formData.name);
+    //     payload.append("phone", formData.phone);
+    //     payload.append("email", formData.email);
+    //     payload.append("message", formData.message);
+    //     payload.append("file", base64String);
+    //     payload.append("filename", formData.file!.name);
+    //     payload.append("mimetype", formData.file!.type);
+    //     try {
+    //       const response = await fetch("YOUR_GOOGLE_SCRIPT_WEB_APP_URL", {
+    //         method: "POST",
+    //         body: payload,
+    //       });
+    //       const result = await response.text();
+    //       setStatus(result); // ✅ Display response status
+    //     } catch (error) {
+    //       setStatus("Error submitting form.");
+    //     }
+    //   }
+    // };
+    // reader.onerror = () => setStatus("Error reading file.");
+  };
+
   return (
     <div className="contact-page">
       {/* ✅ Contact Banner */}
@@ -21,22 +90,19 @@ const Contact = () => {
 
       {/* ✅ Contact Details & Map Section */}
       <div className="contact-details">
-        {/* Left Side: Address & Info */}
         <div className="contact-info">
           <h2>Reach out</h2>
-          <div className=""></div>
           <h3>ADDRESS & PHONE</h3>
           <p>📍 21 Kenview Blvd Unit #29, Brampton, ON L6T 5G7</p>
           <p>📞 Call: 289.933.7005</p>
           <p>📠 Fax: 000.000.0000</p>
-
           <h3>BUSINESS HOURS:</h3>
           <p>
             ⏰ <b>Mon - Fri:</b> 8:30am - 5:00pm
           </p>
         </div>
 
-        {/* Right Side: Google Map */}
+        {/* Google Map */}
         <div className="map-container">
           <iframe
             title="Google Map"
@@ -46,6 +112,65 @@ const Contact = () => {
           ></iframe>
         </div>
       </div>
+
+      {/* ✅ Contact Form Section */}
+      <div className="contact-form-section">
+        <div className="contact-form-container">
+          <div className="contact-form-header">
+            <p>
+              If you have any questions or feedback about our products and
+              services, please fill out the form below, and our team will reach
+              out to you shortly.
+            </p>
+          </div>
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="form-group">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                className="form-input"
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group row">
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone number - e.g. 18885555555"
+                className="form-input"
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                className="form-input"
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                name="message"
+                placeholder="I am looking for"
+                className="form-textarea"
+                onChange={handleChange}
+                required
+              ></textarea>
+            </div>
+            <div className="form-group text-center">
+              <button type="submit" className="submit-btn">
+                Send a Message
+              </button>
+            </div>
+            <p className="status-message">{status}</p>
+          </form>
+        </div>
+      </div>
+
       <AnimatedBanner />
     </div>
   );
