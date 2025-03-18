@@ -10,13 +10,11 @@ const Contact: React.FC = () => {
     phone: string;
     email: string;
     message: string;
-    file: File | null;
   }>({
     name: "",
     phone: "",
     email: "",
     message: "",
-    file: null,
   });
 
   const [status, setStatus] = useState<string>(""); // ✅ Form Submission Status
@@ -29,48 +27,24 @@ const Contact: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // // ✅ Handle File Selection (Now typed correctly)
-  // const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   const file = e.target.files?.[0]; // Safely access the first file
-  //   if (file) {
-  //     setFormData((prev) => ({ ...prev, file }));
-  //   }
-  // };
-
   // ✅ Handle Form Submission
   const handleSubmit = async (e: React.FormEvent) => {
-    // e.preventDefault();
-    // setStatus("Sending...");
-    // if (!formData.file) {
-    //   setStatus("Please attach a file.");
-    //   return;
-    // }
-    // const reader = new FileReader();
-    // reader.readAsDataURL(formData.file);
-    // reader.onload = async () => {
-    //   if (reader.result && typeof reader.result === "string") {
-    //     const base64String = reader.result.split(",")[1]; // ✅ Fix "split" issue
-    //     const payload = new URLSearchParams();
-    //     payload.append("name", formData.name);
-    //     payload.append("phone", formData.phone);
-    //     payload.append("email", formData.email);
-    //     payload.append("message", formData.message);
-    //     payload.append("file", base64String);
-    //     payload.append("filename", formData.file!.name);
-    //     payload.append("mimetype", formData.file!.type);
-    //     try {
-    //       const response = await fetch("YOUR_GOOGLE_SCRIPT_WEB_APP_URL", {
-    //         method: "POST",
-    //         body: payload,
-    //       });
-    //       const result = await response.text();
-    //       setStatus(result); // ✅ Display response status
-    //     } catch (error) {
-    //       setStatus("Error submitting form.");
-    //     }
-    //   }
-    // };
-    // reader.onerror = () => setStatus("Error reading file.");
+    e.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      const response = await fetch("YOUR_GOOGLE_SCRIPT_WEB_APP_URL", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const result = await response.text();
+      setStatus(result); // ✅ Display response status
+    } catch (error) {
+      setStatus("Error submitting form.");
+    }
   };
 
   return (
